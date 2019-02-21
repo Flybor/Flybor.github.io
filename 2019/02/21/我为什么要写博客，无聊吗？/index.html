@@ -144,37 +144,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我为什么要写博客，无聊吗？" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %> <%if(index){%> article-index<%}%>" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
+    <% if (post.link || post.title){ %>
       <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      我为什么要写博客，无聊吗？
-    </h1>
-  
-
-        
-        <a href="/2019/02/21/我为什么要写博客，无聊吗？/" class="archive-article-date">
-  	<time datetime="2019-02-21T03:24:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-21</time>
-</a>
-        
-      </header>
-    
+        <%- partial('post title', {class_name: 'article-title'}) %>
+        <% if (!post.nodate){ %>
+        <%- partial('post date', {class_name: 'archive-article-date', date_format: null}) %>
+        <% } %>
+      </%></%-></%></%-></header>
+    <% } %>
     <div class="article-entry" itemprop="articleBody">
-      
-  	
-  	
-  	  <p>记录学习，整理自己的知识 我们都知道，学习新知识之后，在短时间内尽快复习，会加深自己对知识的记忆，所以每当我们学习一些知识之后，尽快地去复习！那么有一个自己的博客是个很好的事情，来到自己的博客，将自己所学到的知识结合自己的理解记录下来，并且在以后忘记了也可以翻出来看看。那么博客在这里就提供了一个复习、记录知识的平台。 再从知识从书本上到脑袋里的过程来思考这件事，知识在书本上是基本有序的，然后你学习的时候，因为对某些知识的记忆程度不同，在脑海里知识是无序的，都零散的放在各个角落，此时知识的“熵”是很大的，而我们的目的是让知识点的“熵”变得尽量小，那么这个时候写博客的好处又体现出来了，通过一个输出的过程，会把自己脑海中零散的知识给串联起来，变成一个有序的知识体系。这样大脑会更容易记忆和联想。 写作特别像一个反刍的过程。一些食草性动物，比如牛羊，在第一进食的时候是比价匆忙的，只靠胃无法将食物完全消化，所以牛羊会把食物反刍回来，仔细地咀嚼之后再咽下去。这与写博客的过程是如此之像，在写作时，也就是对知识进行“反刍”的时候，一些当时没有理解的问题，一些大块的知识点就可以得到消化，这样当时掌握不牢固的内容会被变得牢固，从而又加深对知识的记忆。<br><a id="more"></a><br>写作是一个思考和学习的过程 在往大脑输入的时候，我们需要思考，同样我们在输出的时候也需要思考，这是不能否认的。 你所想表达的东西在你大脑里可能是线性的，就像一维数组那样。但也可能是一棵树，或许是一棵二叉树。也可能会是一张图。但你将你所想说的用文字来实现的时候，就需要把它们都转成线性的。这个过程好像一种叫做“堆”的数据结构，他的逻辑结构是一棵树，但却是用物理结构是线性的数组来存储。在这个转成线性的过程中，我们需要来分析这之间的逻辑结构，思考先说哪一部分，再说哪一部分。这样输出的过程就是一个用知识的过程，知识记到脑袋里并不一定是自己的，要自己能说出来，能应用才算真正的学会。所以写博客这个过程其实就是一个思考的过程。 在上一个要点里面我用到一个词“反刍”，我本来只是大概的知道他的意思，我写这篇博客正好要用到，于是我就专门去搜索了一下，于是我在写博客的过程中拓展了我的知识面，加深了我对原有的知识的理解。所以写博客的过程也是一个学习的过程。</p>
-<p>检测你最近是否在学习   当你不知道写什么的时候，想想自己最近是不是没有学习和读书。   学计算机的都知道程序要给一个输入，然后经过计算之后才有相应的输出。读书的过程就像一个输入的过程，写作是一个输出的过程。你发现你没有输出的时候，自然应该考虑是不是没有输入。所以当你不知道该写什么的时候，不是你拖延，而是因为你最近可能没有接受什么新的知识。 还有相似的例子，那就是你跟别人聊天时，你所提供的谈资，假如说你在宿舍睡大觉，睡了好多天，然后你出去跟别人聊天，你并不知道外界发生了什么，有什么好玩的事情，那自然不知道该说些什么。</p>
-<p>博客可以间接展示你的能力    这一点的前提是你自己的博客是一个技术博客，或有一大部分是技术笔记。这也正是我写博客的很重要的一点，就是为了记录自己学到的新知识。 在面试的时候，公司是为了选出更加优秀的人才，但是仅仅靠做那一份题，几个小时的面试是很难展现出一个人的真实水平的。但是博客却不同，博客应当记录你几个月，几年的写作情况，这个是你最真实的展现。一看你的博客，就知道你在哪些领域特别熟悉，你都是学过什么技术。所以对于以后面试来说，博客是加分项。</p>
-<p>与世界分享你的知识，经验和见解    一个好的博客会让你交到志同道合的朋友。传统的交朋友的方式都是线下的，两个人需要不断地谈话才能相互了解，这样一个过程是比较缓慢的。而博客就像是一本人物传记一样，我们了解一位名人，很容易想到的一个途径就是去读他的传记（如果他有的话），我们在博客中的写作会很容易展现的我们的态度，经历，价值观。所以如果一个人认真地看了这些，并且认同你的观点，一定会有想认识你的冲动。那么博客会起到展示你自己的作用，会给你带来一些志同道合的朋友。</p>
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link) { %>
+          <a class="article-more-a" href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></%=></a>
+        <% } %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
 
-  	
-  
-
-      
+      <% 1 2 if ((theme.reward_type="==" || (theme.reward_type="==" && post.reward)) !index){ %>
         <div class="page-reward">
           <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
@@ -184,134 +174,93 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃辣条<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i><%= theme.reward_wording%><i class="icon icon-quo-right"></i></%=></p>
                   <div class="reward-box">
-                    
+                    <% if(theme.alipay) {%>
                     <div class="reward-box-item">
-                      <img class="reward-img" src="/img/alipay.jpeg">
+                      <img class="reward-img" src="<%= theme.alipay%>">
                       <span class="reward-type">支付宝</span>
                     </div>
-                    
-                    
+                    <% } %>
+                    <% if(theme.weixin) {%>
                     <div class="reward-box-item">
-                      <img class="reward-img" src="/img/wechatpay.jpeg">
+                      <img class="reward-img" src="<%= theme.weixin%>">
                       <span class="reward-type">微信</span>
                     </div>
-                    
-                  </div>
+                    <% } %>
+                  </%></%></%></%></div>
                 </span>
               </span>
             </span>
           </div>
           </a>
         </div>
-      
-    </div>
+      <% } %>
+    </%></%></%></%-></%></%></%></%-></%></div>
     <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
+      <%if(post.top){%>
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
+      <% } %>
+      <%- partial('post tag') %>
+      <%- partial('post category') %>
+      <% if (index && theme.show_all_link){ %>
+        <p class="article-more-link">
+          <a class="article-more-a" href="<%- url_for(post.path) %>"><%= theme.show_all_link %> >></%=></a>
+        </p>
+      <% } %>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://flybor.github.io/2019/02/21/我为什么要写博客，无聊吗？/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
+      <% if (!index && theme.share_jia){ %>
+        <%- partial('post share') %>
+      <% } %>
       <div class="clearfix"></div>
-    </div>
-  </div>
+    </%></%-></%></%></%></%-></%-></%></%if(post.top){%></div>
+  </%></%></div>
 </article>
+<% if (!index){ %>
+  <%- partial('post nav') %>
+<% } %>
+<%- partial('_partial aside') %>
 
+
+<% if (!index && post.comments){ %>
+  <% if (theme.duoshuo){ %>
+  <%- partial('post duoshuo', { key: post.slug, title: post.title, url: config.url+url_for(post.path) }) %>
+  <% } %>
   
-<nav id="article-nav">
-  
-  
-    <a href="/2019/02/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
+  <% if (theme.wangyiyun){ %>
+  <%- partial('post wangyiyun', { key: post.slug, title: post.title, url: config.url+url_for(post.path) }) %>
+  <% } %>
 
+  <% if (theme.changyan_appid && theme.changyan_conf){ %>
+  <%- partial('post changyan', { key: post.slug, title: post.title, url: config.url+url_for(post.path) }) %>
+  <% } %>
 
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
+  <% if (theme.disqus || config.disqus_shortname){ %>
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = '<%= theme.disqus || config.disqus_shortname %>'; // required: replace example with your forum shortname
 
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  <% } %>
 
-
-  
-  
-  
-
-  
-
-  
-
-  
-
-
+  <% if (theme.gitment_owner && theme.gitment_repo &&theme.gitment_oauth theme.gitment_oauth.client_id theme.gitment_oauth.client_secret){ %>
+  <%- partial('post gitment', { key: post.slug, title: post.title, url: config.url+url_for(post.path) }) %>
+  <% } %>
+<% } %>
+</%></%></%-></%></%></%></%></%-></%></%></%-></%></%></%-></%></%></%-></%></%-></%>
           </div>
         </div>
       </div>
